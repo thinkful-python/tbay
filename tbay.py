@@ -32,5 +32,6 @@ class Bid(Base):
     id = Column(Integer, primary_key=True)
     FloatingPrice = Column(Integer, nullable=False)
     
+#Base.metadata.drop_all(engine)
 Base.metadata.create_all(engine)    
 
