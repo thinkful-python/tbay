@@ -35,3 +35,9 @@ session.commit()
 bid_lianna = Bid(price = 2500, item = baseball, bidder = lianna)
 session.add(bid_lianna)
 session.commit()
+
+highest_bid = session.query(Bid).filter(Bid.item==baseball).order_by(Bid.price.desc()).first()
+#bid = session.query(Bid).(baseball)
+#session.query(Bid).filter(price>3000)
+
+print highest_bid.bidder.username
